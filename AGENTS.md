@@ -40,6 +40,11 @@ swift-format lint --recursive Sources/ Tests/
 
 Always run `swift build` and the relevant `swift test --filter` before considering work done.
 
+> **Note:** `swift test` requires Xcode (not just Command Line Tools) because XCTest
+> is bundled with the Xcode SDK. If only CLT is installed, verify with `swift build`
+> and defer test execution until Xcode is available. Install Xcode, then run
+> `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer` to fix.
+
 ---
 
 ## Project Structure
